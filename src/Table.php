@@ -2,12 +2,12 @@
 /**
  * Represents a table
  *
- * @author Jonathan Kim <jonathan.kim@fusepump.com>
+ * @author Jonathan Kim <jkimbo@gmail.com>
  */
 /**
  * Represents a table
  *
- * @author Jonathan Kim <jonathan.kim@fusepump.com>
+ * @author Jonathan Kim <jkimbo@gmail.com>
  */
 class Table
 {
@@ -177,7 +177,7 @@ class Table
      */
     public function toString()
     {
-        $output = "".PHP_EOL;
+        $output = "";
         foreach ($this->rows as $key => $row) {
             $output .= $this->printRow($key).PHP_EOL;
             if (!empty($this->headers) && $key == 0) {

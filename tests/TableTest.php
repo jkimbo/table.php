@@ -186,7 +186,7 @@ class TableTest extends PHPUnit_Framework_TestCase
         $table->addRow(array('foo', 'bar'));
 
         $this->assertEquals(
-            "\nhello     | world     \n--------------------\nfoo       | bar       \n",
+            "hello     | world     \n--------------------\nfoo       | bar       \n",
             $table->toString()
         );
     }
@@ -205,7 +205,7 @@ class TableTest extends PHPUnit_Framework_TestCase
         $table->addRow(array('foo', 'bar'));
 
         $this->assertEquals(
-            "\ncol1      | col2      \n--------------------"
+            "col1      | col2      \n--------------------"
             ."\nhello     | world     \n--------------------\nfoo       | bar       \n",
             $table->toString()
         );
