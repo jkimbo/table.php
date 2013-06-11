@@ -2,7 +2,7 @@
 
 A simple class to output a nice text table to the cli.
 
-# Example
+## Example
 
 ```php
 $table = new Table(array('Product', 'Price')); // new table with 2 headers
@@ -14,7 +14,7 @@ $table->addSeperator(); // add a separator
 
 $table->addRow(array('Total', 8.39));
 
-$table->toString(); 
+echo $table->toString(); 
 // ->
 // Product     | Price     
 // ----------------------
@@ -25,3 +25,12 @@ $table->toString();
 
 ```
 
+## Tests 
+
+To run tests:
+    
+    phpunit
+
+## License
+
+MIT
