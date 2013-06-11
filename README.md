@@ -2,6 +2,8 @@
 
 A simple class to output a nice text table to the cli.
 
+[![Build Status](https://travis-ci.org/jkimbo/table.php.png?branch=master)](https://travis-ci.org/jkimbo/table.php)
+
 ## Example
 
 ```php
