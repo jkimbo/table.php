@@ -156,4 +156,58 @@ class TableTest extends PHPUnit_Framework_TestCase
 
         $table->printRow(1);
     }
+
+    /**
+     * Test print separator
+     *
+     * @return void
+     */
+    public function testPrintSeparator()
+    {
+        $table = new Table();
+
+        $table->addRow(array('hello', 'world'));
+        $table->addSeparator();
+
+        $this->assertEquals("--------------------", $table->printRow(1));
+    }
+
+    /**
+     * Test to string
+     *
+     * @return void
+     */
+    public function testToString()
+    {
+        $table = new Table();
+
+        $table->addRow(array('hello', 'world'));
+        $table->addSeparator();
+        $table->addRow(array('foo', 'bar'));
+
+        $this->assertEquals(
+            "\nhello     | world     \n--------------------\nfoo       | bar       \n",
+            $table->toString()
+        );
+    }
+
+    /**
+     * Test to string with headers
+     *
+     * @return void
+     */
+    public function testToStringHeaders()
+    {
+        $table = new Table(array('col1', 'col2'));
+
+        $table->addRow(array('hello', 'world'));
+        $table->addSeparator();
+        $table->addRow(array('foo', 'bar'));
+
+        $this->assertEquals(
+            "\ncol1      | col2      \n--------------------"
+            ."\nhello     | world     \n--------------------\nfoo       | bar       \n",
+            $table->toString()
+        );
+    }
 }
