@@ -2,9 +2,9 @@
 
 A simple class to output a nice text table to the cli.
 
-# Examples
+# Example
 
-```
+```php
 $table = new Table(array('Product', 'Price')); // new table with 2 headers
 
 $table->addRow(array('Bread', 3.40)); // add a new row
